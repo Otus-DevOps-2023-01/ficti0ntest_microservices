@@ -1,3 +1,4 @@
+[![Test Actions Status](https://github.com/Otus-DevOps-2023-01/ficti0ntest_microservices/workflows/Run%20tests%20for%20OTUS%20$#
 # ficti0ntest_microservices
 ficti0ntest microservices repository
 
