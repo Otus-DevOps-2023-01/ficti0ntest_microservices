@@ -18,3 +18,4 @@ vault.key
 .pytest_cache
 Pipfile.lock
 Pipfile
+.env

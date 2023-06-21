@@ -2,6 +2,11 @@
 # ficti0ntest_microservices
 ficti0ntest microservices repository
 
+## Сетевое взаимодействие Docker контейнеров. Docker Compose. Тестирование образов (docker-4)
+
+ - Научлись собирать образы приложения reddit с помощью docker-compose
+ - Задать имя образа используя container_name, данная настройка вынесена так же в переменную .env
+
 ##  Docker образы. Микросервисы
 1. Разделяем наше приложение на несколько контейнеров
 ```bash

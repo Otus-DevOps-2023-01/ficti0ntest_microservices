@@ -1,0 +1,40 @@
+---
+version: '3.3'
+services:
+  post_db:
+    container_name: ${DB_name}
+    image: mongo:${MONGO_VER}
+    volumes:
+      - post_db:/data/db
+    networks:
+      - ${BACKEND}
+  ui:
+    container_name: ${UI_name}
+    build: ./ui
+    image: ${USERNAME}/${UI_VER}
+    ports:
+      - ${PORT}
+    networks:
+      - ${FRONTEND}
+  post:
+    container_name: ${POST_name}
+    build: ./post-py
+    image: ${USERNAME}/${POST_VER}
+    networks:
+      - ${FRONTEND}
+      - ${BACKEND}
+  comment:
+    container_name: ${COMMENT_name}
+    build: ./comment
+    image: ${USERNAME}/${COMMENT_VER}
+    networks:
+      - ${BACKEND}
+      - ${FRONTEND}
+
+volumes:
+  post_db:
+
+networks:
+  reddit:
+  backend:
+  frontend:
