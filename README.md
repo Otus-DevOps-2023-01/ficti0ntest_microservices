@@ -2,14 +2,14 @@
 # ficti0ntest_microservices
 ficti0ntest microservices repository
 
-##sd
-- Переходим на страницу http://158.160.59.146/homework/example/-/settings/ci_cd и возлле кнопки "New project runner" находим три точки. Нажимаем на них и копируем токен.
+##Устройство Gitlab CI. Построение процессаПостроение процесса непрерывной поставкинепрерывной поставки
+- Переходим на страницу http://158.160.59.146/homework/example/-/settings/ci_cd и возле кнопки "New project runner" находим три точки. Нажимаем на них и копируем токен.
 - Запускаем раннер на сервере:
 
 ```bash
 sudo docker run -d --name gitlab-runner --restart always -v /srv/gitlab-runner/config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest
 ```
-- Ркгистрируем раннер
+- Регистрируем раннер
 ```bash
 sudo docker exec -it gitlab-runner gitlab-runner register \
 --url http://158.160.59.146/ \
@@ -23,7 +23,8 @@ sudo docker exec -it gitlab-runner gitlab-runner register \
 --run-untagged
 ```
 - Клонируем приложение и вносим правки согласно ДЗ
-
+- Проводим тесты согласно ДЗ
+- Добавляем различные окружения и проверяем работу
 
 ## Сетевое взаимодействие Docker контейнеров. Docker Compose. Тестирование образов (docker-4)
 
